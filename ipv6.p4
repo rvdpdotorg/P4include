@@ -23,18 +23,18 @@
  * RFC 8200: Internet Protocol, Version 6 (IPv6) Specification, July 2017
  */
 
-typedef bit<128> IPv6addr;
+typedef bit<128> ipv6_addr_t;
 
-header IPv6 {
+header ipv6_h {
     bit<4> version;
     bit<6> dscp;
     bit<2> ecn;
     bit<20> flowlabel;
-    bit<16> payloadlen;
+    bit<16> payload_len;
     bit<8> nexthdr;
     bit<8> hoplimit;
-    IPv6addr saddr;
-    IPv6addr daddr;
+    ipv6_addr_t saddr;
+    ipv6_addr_t daddr;
 }
 
 #endif  /* _IPV6_P4_ */

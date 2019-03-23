@@ -27,7 +27,7 @@
  * RFC 8335: PROBE: A Utility for Probing Interfaces, February 2018
  */
 
-header ICMP6 {
+header icmp6_h {
     bit<8> type;
     bit<8> code;
     bit<16> cksum;
@@ -35,7 +35,7 @@ header ICMP6 {
 
 /* Echo Request/Reply */
 
-header ICMP6echo {
+header icmp6echo_h {
     bit<16> id;
     bit<16> sequence;
 }

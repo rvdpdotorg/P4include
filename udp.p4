@@ -21,7 +21,7 @@
  * STD 6 / RFC 768: User Datagram Protocol, August 1980
  */
 
-header UDP {
+header udp_h {
     bit<16> src_port;
     bit<16> dst_port;
     bit<16> length;

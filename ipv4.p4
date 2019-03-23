@@ -34,9 +34,9 @@
  * RFC 6864: Updated Specification of the IPv4 ID Field, February 2013
  */
 
-typedef bit<32> IPv4addr;
+typedef bit<32> ipv4_addr_t;
 
-header IPv4 {
+header ipv4_h {
     bit<4> version;
     bit<4> ihl;
     bit<8> ds;
@@ -47,8 +47,8 @@ header IPv4 {
     bit<8> ttl;
     bit<8> protocol;
     bit<16> cksum;
-    IPv4addr saddr;
-    IPv4addr daddr;
+    ipv4_addr_t saddr;
+    ipv4_addr_t daddr;
 }
 
 #endif  /* _IPV4_P4_ */
