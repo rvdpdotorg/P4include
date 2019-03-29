@@ -37,4 +37,30 @@ header ipv6_h {
     ipv6_addr_t daddr;
 }
 
+// RFC 8200, section 4, IPv6 Extension Headers
+header ipv6_ext_hdr_h {
+    bit<8> nexthdr;
+    bit<8> length;
+}
+
+// RFC 8200, section 4.2, Options
+header ipv6_options_h {
+    bit<8> type;
+    bit<8> length;
+}
+
+// RFC 8200, section 4.4, Routing Header
+header ipv6_routing_hdr_h {
+    bit<8> type;
+    bit<8> segments_left;
+}
+
+// RFC 8200, section 4.5, Fragment Header
+header ipv6_fragment_hdr_h {
+    bit<13> fragment_offset;
+    bit<2> reserved;
+    bit<1> more_fragments;
+    bit<32> id;
+}
+
 #endif  /* _IPV6_P4_ */
