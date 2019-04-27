@@ -14,25 +14,19 @@
  * limitations under the License.
  */
 
-#ifndef _ETHERNET_P4_
-#define _ETHERNET_P4_
+#ifndef _MPLS_P4_
+#define _MPLS_P4_
 
-typedef bit<48> ether_addr_t;
-typedef bit<16> ethertype_t;
+/*
+ * RFC 3032: MPLS Label Stack Encoding, January 2001
+ * RFC 5462: MPLS TC Field Definition, February 2009
+ */
 
-#include <ethertypes.p4>
-
-header ethernet_h {
-    ether_addr_t daddr;
-    ether_addr_t saddr;
-    ethertype_t type;
+header mpls_h {
+    bit<20> label;      /* Label Value */
+    bit<3> tc;          /* Traffic Class field */
+    bit<1> bos;         /* Bottom of Stack */
+    bit<8> ttl;         /* Time to Live */
 }
 
-header vlan_h {
-    bit<3> pcp;
-    bit<1> cfi;
-    bit<12> vid;
-    ethertype_t type;
-}
-
-#endif  /* _ETHERNET_P4_ */
+#endif  /* _MPLS_P4_ */
