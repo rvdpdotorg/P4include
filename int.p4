@@ -34,20 +34,21 @@ header intl4_shim_h {
 /* 16 instruction bits are defined in four 4b fields to allow concurrent
    lookups of the bits without listing 2^16 combinations */
 header int_header_h {
-    bit<4>  ver;
-    bit<2>  rep;
-    bit<1>  c;
-    bit<1>  e;
-    bit<1>  m;
-    bit<7>  rsvd1;
-    bit<3>  rsvd2;
-    bit<5>  hop_metadata_len;
-    bit<8>  remaining_hop_cnt;
-    bit<4>  instruction_mask_0003;
-    bit<4>  instruction_mask_0407;
-    bit<4>  instruction_mask_0811;
-    bit<4>  instruction_mask_1215;
-    bit<16> rsvd3;
+    bit<4>  ver;                        /* Version (1 for this version) */
+    bit<2>  rep;                        /* Replication requested */
+    bit<1>  c;                          /* Copy */
+    bit<1>  e;                          /* Max Hop Count exceeded */
+    bit<1>  m;                          /* MTU exceeded */
+    bit<7>  rsvd1;                      /* Reserved */
+    bit<3>  rsvd2;                      /* Reserved */
+    bit<5>  hop_metadata_len;           /* Per-hop Metadata Length */
+                                        /* in 4-byte words */
+    bit<8>  remaining_hop_cnt;          /* Remaining Hop Count */
+    bit<4>  instruction_mask_0003;      /* Instruction bitmap bits 0-3 */
+    bit<4>  instruction_mask_0407;      /* Instruction bitmap bits 4-7 */
+    bit<4>  instruction_mask_0811;      /* Instruction bitmap bits 8-11 */
+    bit<4>  instruction_mask_1215;      /* Instruction bitmap bits 12-15 */
+    bit<16> rsvd3;                      /* Reserved */
 }
 
 /* INT meta-value headers - different header for each value type */
