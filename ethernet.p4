@@ -17,6 +17,10 @@
 #ifndef _ETHERNET_P4_
 #define _ETHERNET_P4_
 
+/*
+ * IEEE Std 802.1Q-2018, section 9.6
+ */
+
 typedef bit<48> ether_addr_t;
 typedef bit<16> ethertype_t;
 
@@ -25,13 +29,13 @@ typedef bit<16> ethertype_t;
 header ethernet_h {
     ether_addr_t daddr;
     ether_addr_t saddr;
-    ethertype_t type;
+    ethertype_t  type;
 }
 
 header vlan_h {
-    bit<3> pcp;
-    bit<1> cfi;
-    bit<12> vid;
+    bit<3>      pcp;    // Priority Code Point (section 6.9.3)
+    bit<1>      dei;    // Drop Eligible Indicator (section 6.9.3)
+    bit<12>     vid;
     ethertype_t type;
 }
 
