@@ -30,5 +30,7 @@
 #define ETHERTYPE_MPLS_UPSTREAM         0x8848
 #define ETHERTYPE_STAG                  0x88A8
 #define ETHERTYPE_LLDP                  0x88CC
+#define ETHERTYPE_LOCAL_EXPERIMENTAL_1  0x88B5
+#define ETHERTYPE_LOCAL_EXPERIMENTAL_2  0x88B6
 
 #endif  /* _ETHERTYPES_P4_ */
