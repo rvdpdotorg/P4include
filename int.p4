@@ -23,16 +23,17 @@
 
 /* INT shim header for TCP/UDP */
 header intl4_shim_h {
-    bit<8>  int_type;
-    bit<8>  rsvd1;
-    bit<8>  len;
-    bit<6>  dscp;
-    bit<2>  rsvd2;
+    bit<8>  int_type;       /* INT header type */
+    bit<8>  rsvd1;          /* Reserved */
+    bit<8>  len;            /* Total length of INT Metadata, INT Stack */
+                            /* and Shim Header in 4-byte words */
+    bit<6>  dscp;           /* Original IP DSCP value (optional) */
+    bit<2>  rsvd2;          /* Reserved */
 }
 
 /* INT header */
-/* 16 instruction bits are defined in four 4b fields to allow concurrent
-   lookups of the bits without listing 2^16 combinations */
+/* 16 instruction bits are defined in four 4b fields to allow concurrent */
+/* lookups of the bits without listing 2^16 combinations */
 header int_header_h {
     bit<4>  ver;                        /* Version (1 for this version) */
     bit<2>  rep;                        /* Replication requested */
