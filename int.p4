@@ -21,6 +21,15 @@
  * https://github.com/p4lang/p4-applications/blob/master/docs/INT.pdf
  */
 
+/* INT probe marker for TCP/UDP */
+header int_probe_marker_1_h {
+    bit<32> value;
+}
+
+header int_probe_marker_2_h {
+    bit<32> value;
+}
+
 /* INT shim header for TCP/UDP */
 header intl4_shim_h {
     bit<8>  int_type;       /* INT header type */
