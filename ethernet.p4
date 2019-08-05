@@ -24,7 +24,7 @@
 typedef bit<48> ether_addr_t;
 typedef bit<16> ethertype_t;
 
-#include <ethertypes.p4>
+#include "ethertypes.p4"
 
 header ethernet_h {
     ether_addr_t daddr;

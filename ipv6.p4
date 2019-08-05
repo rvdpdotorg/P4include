@@ -17,7 +17,7 @@
 #ifndef _IPV6_P4_
 #define _IPV6_P4_
 
-#include <protocols.p4>
+#include "protocols.p4"
 
 /*
  * RFC 8200: Internet Protocol, Version 6 (IPv6) Specification, July 2017

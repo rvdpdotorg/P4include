@@ -17,7 +17,7 @@
 #ifndef _IPV4_P4_
 #define _IPV4_P4_
 
-#include <protocols.p4>
+#include "protocols.p4"
 
 /*
  * STD 5 / RFC 791: Internet Protocol, September 1981
