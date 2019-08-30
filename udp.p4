@@ -24,7 +24,7 @@
 header udp_h {
     bit<16> src_port;
     bit<16> dst_port;
-    bit<16> length;
+    bit<16> length;     // header + data in bytes
     bit<16> cksum;
 }
 
